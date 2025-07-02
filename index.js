@@ -16,8 +16,9 @@ app.use(express.static('public'));
 //Lectura y parse del body
 app.use(express.json());
 
-//RutasI
+//Rutas
 app.use('/api/auth', require('./routes/auth') );
+app.use('/api/events', require('./routes/events') );
 
 
 app.listen(process.env.PORT, () => {
